@@ -1,6 +1,5 @@
 """
 # File     : iPAS-python-program.py
-# Title    : iPAS python program
 # Author   : Ming-Chang Lee
 # Date     : 2020.11.18
 # YouTube  : https://www.youtube.com/@alan9956
