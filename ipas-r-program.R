@@ -1,5 +1,4 @@
 # File     : ipas-r-program.R
-# Title    : A Marvelous R -  Foundation
 # Author   : Ming-Chang Lee
 # Date     : 2011.07.04
 # YouTube  : https://www.youtube.com/@alan9956
@@ -8,7 +7,7 @@
 # Email    : alan9956@gmail.com
 
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
-# 原檔名為 aMarvelousR_Lee(pp238).R, 2023.4.3 更名為 ipas-r-program.R
+# 原檔名為 aMarvelousR_Lee(pp238).R, 用於 "A Marvelous R -  Foundation", 2023.4.3 更名為 ipas-r-program.R
 
 # Updated : 2020.06.03 更新程式碼
 # Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
