@@ -616,6 +616,8 @@ print(var) # 2.4
 
 # 答案： B
 
+# 10%*95%(分類正確)*90%*5%(分類錯誤)=14%
+
 ##################################################
 # 32. 如附圖所示為 R 語言，執行 ggplot2 套件視覺化分析，下列敘述哪一項正確？
 
@@ -661,5 +663,6 @@ print(cos) # 0.67
 # 答案： A
 
 # Mallows's Cp: https://en.wikipedia.org/wiki/Mallows%27s_Cp
-# 馬洛斯(Colin Lingwood Mallows)提出運用Cp去評估一個最小平方法(Ordinary Least Square或OLS)為假設的線性迥歸模型的優良性, Cp數值越小模型準確性越高。同理, AIC, BIC 準則會選取數值較小者為較佳模型.
+# 馬洛斯(Colin Lingwood Mallows)提出運用Cp去評估一個最小平方法(Ordinary Least Square或OLS)
+# 為假設的線性迥歸模型的優良性, Cp數值越小模型準確性越高。同理, AIC, BIC 準則會選取數值較小者為較佳模型.
 # end
