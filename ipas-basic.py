@@ -27,10 +27,13 @@
 # 單位矩陣是n階單位矩陣，是一個n×n的方形矩陣，其主對角線元素為1，其餘元素為0。
 # https://en.wikipedia.org/wiki/Identity_matrix
 
-# 在線性代數中，一個矩陣 A 的行秩是 A 的線性獨立的縱行的極大數目。類似地，列秩是 A 的線性獨立的橫列的極大數目。矩陣的行秩和列秩總是相等的，因此它們可以簡單地稱作矩陣 A 的秩。通常表示為 rank(A)。
+# 在線性代數中，一個矩陣 A 的行秩是 A 的線性獨立的縱行的極大數目。類似地，列秩是 A 的線性獨立的橫列的極大數目。
+# 矩陣的行秩和列秩總是相等的，因此它們可以簡單地稱作矩陣 A 的秩。通常表示為 rank(A)。
 # https://en.wikipedia.org/wiki/Rank_(linear_algebra)
 
-# 逆矩陣（inverse matrix），又稱乘法反方陣、反矩陣。在線性代數中，給定一個n 階方陣 A，若存在一n 階方陣 B，使得 AB=BA=I_n，其中 I_n為n 階單位矩陣，則稱 A 是可逆的，且 B 是 A 的逆矩陣，記作 A^[-1]。若方陣 A 的逆矩陣存在，則稱 A 為非奇異方陣（nonsingular matrix）或非退化方陣（nondegenerate matrix）或可逆方陣（inverse matrix）。
+# 逆矩陣（inverse matrix），又稱乘法反方陣、反矩陣。在線性代數中，給定一個n 階方陣 A，若存在一n 階方陣 B，
+# 使得 AB=BA=I_n，其中 I_n為n 階單位矩陣，則稱 A 是可逆的，且 B 是 A 的逆矩陣，記作 A^[-1]。
+# 若方陣 A 的逆矩陣存在，則稱 A 為非奇異方陣（nonsingular matrix）或非退化方陣（nondegenerate matrix）或可逆方陣（inverse matrix）。
 # https://en.wikipedia.org/wiki/Invertible_matrix
 
 ##################################################
@@ -46,7 +49,7 @@
 # 理解其意義。
 
 ##################################################
-# 13.	在資料表正規化的過程（1NF 到 BCNF）中，每一個階段都是以欄位的「相依性」作為分割資料表的依據之一，關於正規化步驟之敘述， 下列何者不正確？
+# 13.	在資料表正規化的過程（1NF 到 BCNF）中，每一個階段都是以欄位的「相依性」作為分割資料表的依據之一，關於正規化步驟之敘述，下列何者不正確？
 # (A) 第一正規化型式：除去重覆群
 # (B) 第二正規化型式：除去部分相依
 # (C) 第三正規化型式：除去遞移相依
@@ -89,8 +92,10 @@
 
 # 答案： A
 
-# 傅立葉轉換（法語：Transformation de Fourier，英語：Fourier transform，縮寫：FT）是一種線性積分轉換，用於函數（應用上稱作「信號」）在時域和頻域之間的轉換。因其基本思想首先由法國學者約瑟夫·傅立葉系統地提出，所以以其名字來命名以示紀念。
-# 傅立葉轉換在物理學和工程學中有許多應用。傅立葉轉換的作用是將函數分解為不同特徵的正弦函數的和，如同化學分析來分析一個化合物的元素成分。對於一個函數，也可對其進行分析，來確定組成它的基本（正弦函數）成分。
+# 傅立葉轉換（法語：Transformation de Fourier，英語：Fourier transform，縮寫：FT）是一種線性積分轉換，
+# 用於函數（應用上稱作「信號」）在時域和頻域之間的轉換。因其基本思想首先由法國學者約瑟夫·傅立葉系統地提出，所以以其名字來命名以示紀念。
+# 傅立葉轉換在物理學和工程學中有許多應用。傅立葉轉換的作用是將函數分解為不同特徵的正弦函數的和，
+# 如同化學分析來分析一個化合物的元素成分。對於一個函數，也可對其進行分析，來確定組成它的基本（正弦函數）成分。
 # https://en.wikipedia.org/wiki/Fourier_transform
 
 ##################################################
@@ -136,7 +141,8 @@
 # 29. 關於模型績效評估，下列敘述何者不正確？
 # (A) 殘差（或稱預測誤差）是預測的反應變數值減去真實的反應變數值
 # (B) 迴歸模型績效衡量大多基於殘差
-# (C) 赤池弘次訊息準則（Akaike’s Information Criterion, AIC）與舒瓦茲貝氏訊息準則（Schwarz’s Bayesian Information Criterion, BIC）的不同在於懲罰過多變數入模的方式不同
+# (C) 赤池弘次訊息準則（Akaike’s Information Criterion, AIC）與舒瓦茲貝氏訊息準則
+# （Schwarz’s Bayesian Information Criterion, BIC）的不同在於懲罰過多變數入模的方式不同
 # (D) Mallow’s Cp 準則有考慮建模所用的變數數量，因此適合用來比較不同變數數量下的模型績效
 
 # 答案： A
@@ -287,7 +293,8 @@ print(x[-4])
 # (C)	HBase 表格中插入值的正確指令為 put
 
 ##################################################
-# 19. 如附圖所示， R  語言使用  read.table  函數匯入  CSV  文字檔， 執行 df <- read.table("ipas.csv", sep = ",") ，下列敘述哪一項錯誤？
+# 19. 如附圖所示， R  語言使用  read.table  函數匯入  CSV  文字檔， 
+# 執行 df <- read.table("ipas.csv", sep = ",") ，下列敘述哪一項錯誤？
 
 # (A)	class(df)結果是 "data.frame"
 # (B)	nrow(df)結果是 7
@@ -412,7 +419,8 @@ value1, value2 = personal_info('Oscar', '2022-01-01', 'Satyrday', gender='male',
 
 # Python 函數的參數：
 # 1. 關鍵字參數(Keyword Argument)：呼叫函數參數時, 在傳入參數值的前面加上函數所定義的參數名稱.
-# 2. 預設值參數(Default Argument)：在函數定義的參數中, 沒有傳入參數值時，依照預設值來進行運算, 其中必要參數(Required Argument)須放在預設參數(Optional Argument)的前面.
+# 2. 預設值參數(Default Argument)：在函數定義的參數中, 沒有傳入參數值時，依照預設值來進行運算, 
+# 其中必要參數(Required Argument)須放在預設參數(Optional Argument)的前面.
 # 3. *args 運算子: 使用 tuple 傳入參數.
 # 4. **kwargs 運算子: 使用 dict 傳入參數.
 
@@ -467,7 +475,8 @@ print('balance: ', balance)
 # 答案： C
 
 # 熱卡填補法（Hot Deck Imputation）
-# A once-common method of imputation was hot-deck imputation where a missing value was imputed from a randomly selected similar record.
+# A once-common method of imputation was hot-deck imputation where a missing value was 
+# imputed from a randomly selected similar record.
 # https://en.wikipedia.org/wiki/Imputation_(statistics)
 
 ##################################################
@@ -479,12 +488,13 @@ print('balance: ', balance)
 
 # 答案： B
 
-# 二元分類在決策樹(Decision Tree)學習過程中, 信息增益(Information Gain, IG)是特徵選擇的一個重要指標, 它定義為一個特徵能夠為分類系統帶來多少信息, 帶來的信息越多, 說明該特徵越重要, 其信息增益也就越大。因此, 本題
+# 二元分類在決策樹(Decision Tree)學習過程中, 信息增益(Information Gain, IG)是特徵選擇的一個重要指標, 
+# 它定義為一個特徵能夠為分類系統帶來多少信息, 帶來的信息越多, 說明該特徵越重要, 其信息增益也就越大。因此, 本題選(B).
 
 ##################################################
 # 15. 關於特徵（屬性）萃取（Feature Extraction）與轉換（Transformation），下列敘述哪一項正確？
 # (A)	資料縮減泛指屬性挑選（Selection）與萃取（Extraction）
-# (B)	屬性越多，表示後續建模有越多參數要調校，過度配適（Overfitting）的   風險越低
+# (B)	屬性越多，表示後續建模有越多參數要調校，過度配適（Overfitting）的風險越低
 # (C)	各屬性的量綱均一化屬於屬性萃取（Extraction）的工作
 # (D)	主成分分析（Principal Component Analysis, PCA）是分佈偏斜屬性常用的轉換方法
 
@@ -536,7 +546,9 @@ pd.Series(superplastic_boxcox).skew() # 0.034
 # 答案： B
 
 # SPOF 問題(Single point of failure)
-# Secondary namenode並不是HA的解法，它的作用是為了協助Namenode進行edits與fsimage的merge，讓重啟的時候Namenood不會因為跑edits的檔案太多，以致於執行的時間很長。不過當namenode有問題的時候，從secondary namenode載入metadata，也是可行的，但是還是要人工介入且也不是HA。
+# Secondary namenode並不是HA的解法，它的作用是為了協助Namenode進行edits與fsimage的merge，
+# 讓重啟的時候Namenood不會因為跑edits的檔案太多，以致於執行的時間很長。不過當namenode有問題的時候，
+# 從secondary namenode載入metadata，也是可行的，但是還是要人工介入且也不是HA。
 # https://ithelp.ithome.com.tw/articles/10133021
 
 # high availability with Quorum Journal Manager (QJM) is preferred option.
@@ -560,7 +572,8 @@ data2 # [1, 4, 9, 16, 25]
 sum(data2) # 55
 
 ##################################################
-# 22. 若隨機變數 X 服從二項分配（Binomial  Distribution），其每次試驗成功的機率為 0.4，試驗次數為 10 次，則 X 的期望值與變異數，下列哪一項正確？
+# 22. 若隨機變數 X 服從二項分配（Binomial  Distribution），其每次試驗成功的機率為 0.4，
+# 試驗次數為 10 次，則 X 的期望值與變異數，下列哪一項正確？
 # (A)	期望值為 2 與變異數為 1.2
 # (B)	期望值為 2 與變異數為 2.4
 # (C)	期望值為 4 與變異數為 1.2
@@ -577,7 +590,8 @@ var = n*p*(1-p)
 print(var) # 2.4
 
 ##################################################
-# 24. 某公司所生產 10 公斤裝的糖果，其標準差為 0.4 公斤，欲估計母體平均數。若 Z 為標準常態分配，且 Pr(Z < -1.96) = 2.5%，在 95%信賴水準下， 使估計誤差不超過 0.08 公斤，至少應抽多少包糖果來秤重？
+# 24. 某公司所生產 10 公斤裝的糖果，其標準差為 0.4 公斤，欲估計母體平均數。
+# 若 Z 為標準常態分配，且 Pr(Z < -1.96) = 2.5%，在 95%信賴水準下， 使估計誤差不超過 0.08 公斤，至少應抽多少包糖果來秤重？
 # (A)	62 包
 # (B)	75 包
 # (C)	97 包
@@ -591,6 +605,16 @@ print(var) # 2.4
 # n >= (1.96*0.4/0.08)**2 
 (1.96*0.4/0.08)**2 # 96.04
 # 因此, n=97.
+
+##################################################
+# 27. 某公司生產的燈泡有 10%的不良率。此公司為了品質對每一個燈泡做檢驗，將其分類為「通過」或「不通過」。
+# 若檢驗員有 5%的機會分類錯誤， 則下列哪一項是被分類為「不通過」的百分比？
+(A) 12%
+(B) 14%
+(C) 16%
+(D) 18%
+
+# 答案： B
 
 ##################################################
 # 32. 如附圖所示為 R 語言，執行 ggplot2 套件視覺化分析，下列敘述哪一項正確？
