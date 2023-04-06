@@ -11,3 +11,5 @@
 + R 程式練習 https://github.com/rwepa/ipas_bda/blob/main/ipas-r-program.R
 
 + iPAS - 免費線上課程 http://rwepa.blogspot.com/2022/05/ipas-big-data-analyst-free-course.html
+
++ iPAS - 初級參考資料 https://github.com/rwepa/ipas_bda/blob/main/ipas-basic.py
