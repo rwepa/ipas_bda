@@ -4,7 +4,7 @@
 
 + 【注意】:資料如有變動, 依考試網站公佈為主.
 
-+ 資料來源: https://www.ipas.org.tw/bda/AbilityIndex.aspx
++ 資料來源: https://www.ipas.org.tw/bda/
 
 + 初級巨量資料分析師考試科目:
 
