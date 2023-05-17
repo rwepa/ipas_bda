@@ -1460,6 +1460,24 @@ filname <- "h_nhi_ipdte103.sas7bdat"
 system.time(dd2014 <- read.sas7bdat(filname))
 dd2014
 
+# 2023.5.17 updated
+# 載入套件
+library(haven)
+
+# 匯入資料
+dd2014 <- read_sas("h_nhi_ipdte103.sas7bdat")
+
+# 執行系統時間
+system.time(dd2014 <- read_sas("h_nhi_ipdte103.sas7bdat")) # 0.43秒
+#   user  system elapsed 
+#   0.21    0.00    0.43 
+ 
+# 顯示資料
+dd2014 # 14,297 × 80
+
+# 類別
+class(dd2014) # "tbl_df" "tbl" "data.frame"
+
 # Chapter 12.dplyr 套件 -----
 
 # r cran dplyr
