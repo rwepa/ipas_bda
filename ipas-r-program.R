@@ -9,6 +9,9 @@
 # reference: http://rwepa.blogspot.com/2013/01/r-201174.html
 # 原檔名為 aMarvelousR_Lee(pp238).R, 用於 "A Marvelous R -  Foundation", 2023.4.3 更名為 ipas-r-program.R
 
+# 更新所有套件
+update.packages(ask = FALSE, checkBuilt = TRUE)
+
 # Updated : 2020.06.03 更新程式碼
 # Updated : 2021.04.11 新增 Chapter 6. iPAS-R-program (Chapter 6.iPAS - 科目二：資料處理與分析概論)
 # Updated : 2021.06.01 新增 Chapter 7. ggplot2 套件
