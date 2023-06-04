@@ -25,3 +25,7 @@
 + R 程式練習 https://github.com/rwepa/ipas_bda/blob/main/ipas-r-program.R
 
 + iPAS - 初級參考資料 https://github.com/rwepa/ipas_bda/blob/main/ipas-basic.py
+
++ 中級-108.09.15-術科考題 https://github.com/rwepa/ipas_bda/blob/main/%E4%B8%AD%E7%B4%9A-108.09.15-%E8%A1%93%E7%A7%91%E8%80%83%E9%A1%8C.pdf
+
++ 中級-108.09.15-術科考題-資料集.zip https://github.com/rwepa/ipas_bda/blob/main/%E4%B8%AD%E7%B4%9A-108.09.15-%E8%A1%93%E7%A7%91%E8%80%83%E9%A1%8C-%E8%B3%87%E6%96%99%E9%9B%86.zip
