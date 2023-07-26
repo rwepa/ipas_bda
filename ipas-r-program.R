@@ -37,6 +37,9 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 
 # Chapter 1. Basic R -----
 
+# Change language settings
+Sys.setenv(LANG = "en")
+
 # p.10
 # hist and plot
 x <- c(1:100)
