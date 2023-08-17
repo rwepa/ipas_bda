@@ -67,7 +67,7 @@ conda info
 conda list
 pip list
 
-# 查詢模組資訊
+# 顯示已經安裝模組的資訊
 pip show 模組名稱
 
 # 安裝模組
@@ -87,6 +87,9 @@ conda update spyder
 # 移除模組
 conda remove 模組名稱
 pip uninstall 模組名稱
+
+# 模組安裝路徑
+python -m site
 
 ##############################
 # 切換工作目錄
