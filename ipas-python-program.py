@@ -1564,27 +1564,24 @@ w: white
 import pandas as pd
 import matplotlib.pyplot as plot
 
-target_url = ("https://archive.ics.uci.edu/ml/machine-learning-databases/undocumented/connectionist-bench/sonar/sonar.all-data")
+# 下載資料集 https://github.com/rwepa/DataDemo/blob/master/sonar_all_data.csv
 
-# 資料有 208列, 61行
+target_url = "https://raw.githubusercontent.com/rwepa/DataDemo/master/sonar_all_data.csv"
+
+# 資料: 208列, 61行
 # X: V0-V59
 # Y: V60
-# 第61行: R: rock  岩石
+# 第61行: R: rock 岩石
 # 第61行: M: mine 水雷
-rocksVMines = pd.read_csv(target_url, header=None, prefix="V")
-rocksVMines
-#          V0      V1      V2      V3      V4  ...     V56     V57     V58     V59  V60
-# 0    0.0200  0.0371  0.0428  0.0207  0.0954  ...  0.0180  0.0084  0.0090  0.0032    R
-# 1    0.0453  0.0523  0.0843  0.0689  0.1183  ...  0.0140  0.0049  0.0052  0.0044    R
-# 2    0.0262  0.0582  0.1099  0.1083  0.0974  ...  0.0316  0.0164  0.0095  0.0078    R
-# 3    0.0100  0.0171  0.0623  0.0205  0.0205  ...  0.0050  0.0044  0.0040  0.0117    R
-# 4    0.0762  0.0666  0.0481  0.0394  0.0590  ...  0.0072  0.0048  0.0107  0.0094    R
-# ..      ...     ...     ...     ...     ...  ...     ...     ...     ...     ...  ...
-# 203  0.0187  0.0346  0.0168  0.0177  0.0393  ...  0.0065  0.0115  0.0193  0.0157    M
-# 204  0.0323  0.0101  0.0298  0.0564  0.0760  ...  0.0034  0.0032  0.0062  0.0067    M
-# 205  0.0522  0.0437  0.0180  0.0292  0.0351  ...  0.0140  0.0138  0.0077  0.0031    M
-# 206  0.0303  0.0353  0.0490  0.0608  0.0167  ...  0.0034  0.0079  0.0036  0.0048    M
-# 207  0.0260  0.0363  0.0136  0.0272  0.0214  ...  0.0040  0.0036  0.0061  0.0115    M
+
+colnames = list()
+for i in range(0, 61):
+    colnames.append(f"V{i}")
+print(colnames)
+
+# 匯入資料
+rocksVMines = pd.read_csv(target_url, header=None, names=colnames)
+print(rocksVMines)
 
 # print head and tail of data frame
 print(rocksVMines.head())
@@ -1593,17 +1590,8 @@ rocksVMines.tail()
 # print summary of data frame
 summary = rocksVMines.describe()
 print(summary)
-#                V0          V1          V2  ...         V57         V58         V59
-# count  208.000000  208.000000  208.000000  ...  208.000000  208.000000  208.000000
-# mean     0.029164    0.038437    0.043832  ...    0.007949    0.007941    0.006507
-# std      0.022991    0.032960    0.038428  ...    0.006470    0.006181    0.005031
-# min      0.001500    0.000600    0.001500  ...    0.000300    0.000100    0.000600
-# 25%      0.013350    0.016450    0.018950  ...    0.003600    0.003675    0.003100
-# 50%      0.022800    0.030800    0.034300  ...    0.005800    0.006400    0.005300
-# 75%      0.035550    0.047950    0.057950  ...    0.010350    0.010325    0.008525
-# max      0.137100    0.233900    0.305900  ...    0.044000    0.036400    0.043900
 
-#平行座標軸 Parallel coordinates graph
+# 平行座標軸 Parallel coordinates graph
 for i in range(208):
     # assign color based on color based on "M" or "R" labels
     if rocksVMines.iat[i,60] == "M":
@@ -1619,7 +1607,6 @@ for i in range(208):
 
 plot.xlabel("Attribute Index")
 plot.ylabel("Attribute Values")
-plot.show()
 
 # 散佈圖矩陣 scatter_matrix{pandas}
 import pandas as pd
