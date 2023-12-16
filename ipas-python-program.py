@@ -2274,7 +2274,7 @@ graph = graphviz.Source(dot_data)
 graph
 
 ##############################
-# 14.Deep Learning-CNN-MNIST
+# 14.深度學習CNN - MNIST範例
 ##############################
 
 # 安裝 conda install tensorflow (或是 pip install tensorflow)
