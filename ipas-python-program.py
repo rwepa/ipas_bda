@@ -21,6 +21,7 @@ Updated : 2022.08.02 -新增 18.conda虛擬環境
 Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
 Updated : 2022.11.14 -新增 20.皮馬印第安人糖尿病預測分析
 Updated : 2023.02.27 -新增 21.pandas繪圖
+Updated : 2023.12.17 -新增 22.顯示已經載入模組的清單
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -52,6 +53,7 @@ Updated : 2023.02.27 -新增 21.pandas繪圖
 # 19.ipynb轉換為pdf檔案
 # 20.皮馬印第安人糖尿病預測分析
 # 21.pandas繪圖
+# 22.顯示已經載入模組的清單
 
 # Anaconda 下載
 # https://www.anaconda.com/
@@ -3250,4 +3252,14 @@ df.plot.bar(rot=0)
 
 # 堆疊群組長條圖
 df.plot.bar(stacked=True, rot=0)
+
+##############################
+# 22.顯示已經載入模組的清單
+##############################
+
+import sys
+output = [module.__name__ for module in sys.modules.values() if module]
+output = sorted(output)
+print("已經載入的模組(包括方法)清單: ", output)
+print("已經載入的模組(包括方法)個數: ", len(output))
 # end
