@@ -587,6 +587,8 @@ print("Hello World")   # python 3
 
 # pandas 設定顯示所有欄位
 pd.set_option('display.expand_frame_repr', False)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 # 載入2大套件 pandas, numpy
 # https://pandas.pydata.org/docs/user_guide/10min.html
