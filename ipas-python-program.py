@@ -1493,7 +1493,7 @@ import matplotlib
 # 設定 matplotlib.rcParams 方法
 matplotlib.rcParams['font.sans-serif'] = ['Microsoft YaHei']
 
-# 設定負號錯誤顯示
+# 設定負號正確顯示
 matplotlib.rcParams['axes.unicode_minus'] = False
 
 ##############################
