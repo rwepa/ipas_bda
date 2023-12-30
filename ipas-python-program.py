@@ -2302,6 +2302,40 @@ np.random.seed(seed)
 # 載入 MNIST 資料集
 (X_train, Y_train), (X_test, Y_test) = mnist.load_data()
 
+# MNIST 視範化
+# 設定繪圖行數, 列數
+columns = 5
+rows = 4
+
+# Y label對應表
+labels_map = {1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 
+              6: '6', 7: '7', 8: '8', 9: '9', 0: '0'}
+
+# 設定繪圖大小, 預設值 =(6.4, 4.8)
+# figaize=(width_size, height_size)
+fig = plt.figure(figsize=(10, 6))
+for i in range(1, columns*rows+1):
+       
+    # 取出圖片
+    img = X_train[i]
+    
+    # 依據 y-label 找出對應類別
+    label = labels_map[Y_train[i]]
+    
+    # 選定子圖位置
+    fig.add_subplot(rows, columns, i)
+    
+    # 設定標題
+    plt.title(label, fontsize=20)
+    
+    # 顯示圖片
+    plt.imshow(img)
+    # plt.imshow(img, cmap='gray')
+    
+    # 關閉刻度
+    plt.axis('off')
+plt.tight_layout()
+
 # 將圖片轉換成 4D 張量
 X_train = X_train.reshape(X_train.shape[0], 28, 28, 1).astype("float32")
 X_test = X_test.reshape(X_test.shape[0], 28, 28, 1).astype("float32")
