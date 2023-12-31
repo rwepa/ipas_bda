@@ -2323,17 +2323,18 @@ for i in range(1, columns*rows+1):
     label = labels_map[Y_train[i]]
     
     # 選定子圖位置
-    fig.add_subplot(rows, columns, i)
-    
-    # 設定標題
-    plt.title(label, fontsize=20)
+    fig.add_subplot(rows, columns, i)    
     
     # 顯示圖片
     plt.imshow(img)
     # plt.imshow(img, cmap='gray')
+
+    # 設定標題
+    plt.title(label, fontsize=20)
     
     # 關閉刻度
     plt.axis('off')
+	
 plt.tight_layout()
 
 # 將圖片轉換成 4D 張量
