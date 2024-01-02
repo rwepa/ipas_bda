@@ -581,6 +581,34 @@ print("Good NumPy: %f sec"%good_np_sec)
 print "Hello World"    # python 2, Python 3 with ERROR
 print("Hello World")   # python 3
 
+# np.argmax 運算
+
+# 一維向量
+x = np.arange(12)
+x  # array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+print(x.ndim)       # 1
+print(x.shape)      # (12,)
+print(np.argmax(x)) # 11
+
+# 二維向量, axis=0 依行為操作, 找出各行最大值的指標
+x = np.array([[1,2,5,6],
+             [18,7,6,5],
+             [9,12,7,2]])
+# array([[ 1,  2,  5,  6],
+#        [18,  7,  6,  5],
+#        [ 9, 12,  7,  2]])
+
+print(np.argmax(x, axis=0))  # [1 2 2 0]
+
+# 二維向量, axis=1 依列為操作
+print(np.argmax(x, axis=1))  # [3 0 1]
+
+# 二維向量, axis=-1
+print(np.argmax(x, axis=-1)) # [3 0 1]
+
+# 二維向量, axis=-2
+print(np.argmax(x, axis=-2)) # [1 2 2 0]
+
 ##############################
 # 04.Pandas資料結構
 ##############################
