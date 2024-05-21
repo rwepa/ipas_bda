@@ -714,7 +714,7 @@ qqline(log(Cars93$Price), col=2)
 # end
 
 # p.145
-# one-way amova
+# one-way anova
 # Copy the data to C:\R.data
 
 # Import data
