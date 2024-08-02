@@ -20,6 +20,8 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Updated : 2021.12.25 新增 Chapter 10.安裝專案套件
 # Updated : 2022.05.04 新增 Chapter 11.匯入SAS檔案
 # Updated : 2022.09.12 新增 Chapter 12.dplyr 套件
+# Updated : 2024.08.02 新增 Chapter 13.正規表示式
+# Updated : 2024.08.02 新增 Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -34,6 +36,8 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Chapter 10.安裝專案套件
 # Chapter 11.匯入SAS檔案
 # Chapter 12.dplyr 套件
+# Chapter 13.正規表示式
+# Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
 
 # Chapter 1. Basic R -----
 
@@ -1595,4 +1599,110 @@ distinct(df, y) # 與下列結果相同 unique(df$y)
 
 # mutate 新增欄位,保留原資料 -----
 mutate(mtcars, displ_l = disp / 61.0237)
+
+# Chapter 13.正規表示式 -----
+?regex
+# https://jfjelstul.github.io/regular-expressions-tutorial/
+# stringr 套件: https://stringr.tidyverse.org/
+
+# Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析 -----
+
+# 資料來源: https://data.gov.tw/dataset/137993
+
+# 載入套件
+library(jsonlite)
+library(dplyr)
+library(leaflet)
+library(htmltools)
+
+# 匯入資料並轉換為tibble
+urls <- "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
+df <- tibble::as_tibble(fromJSON(txt = urls))
+
+# 轉換為 factor
+df$sarea <- factor(df$sarea)
+
+# 轉換為 Date
+df$infoDate <- as.Date(df$infoDate)
+
+# 將 "YouBike2.0_" 取代為空白
+df$sna <- gsub("YouBike2.0_", "", df$sna)
+
+# 新增使用率變數 usage
+df$usage <- (df$total - df$available_rent_bikes)/df$total
+
+# 資料結構
+str(df)
+
+# 資料結構
+str(df)
+
+# 資料摘要
+summary(df)
+
+# 可借數量直方圖
+tmp <- hist(df$available_rent_bikes)
+ymax <- tmp$counts[1]+150
+hist(df$available_rent_bikes, 
+     ylim =c(0, ymax),
+     xlab = "Available Rent Bikes",
+     main = paste0("臺北市Youbike可借數量直方圖, ", df$infoDate[1]))
+box()
+grid()
+
+# 可借數量依行政區水平長條圖
+df_available_tmp <- aggregate(x = available_rent_bikes ~ sarea,
+                              data = df,
+                              FUN = sum)
+
+df_available_tmp <- df_available_tmp[order(df_available_tmp$available_rent_bikes),]
+
+df_available <- as.table(df_available_tmp$available_rent_bikes)
+names(df_available) <- df_available_tmp$sarea
+df_available
+
+barplot(df_available, 
+        width = 0.5, 
+        horiz = TRUE, 
+        cex.names = 0.8,
+        las = 2,
+        main = paste0("臺北市Youbike可借數量依行政區水平長條圖, ", df$infoDate[1]))
+box()
+grid()
+
+# 臺北市Youbike使用率互動式地圖
+
+# 設定地圖的標題
+tag.map.title <- tags$style(HTML("
+  .leaflet-control.map-title { 
+    transform: translate(-50%,20%);
+    position: fixed !important;
+    left: 50%;
+    text-align: center;
+    padding-left: 10px; 
+    padding-right: 10px; 
+    background: rgba(255,255,255,0.75);
+    font-weight: bold;
+    font-size: 18px;
+  }
+"))
+
+# 建立 tag 物件
+title <- tags$div(
+  tag.map.title, HTML("臺北市Youbike使用率互動式地圖")
+)  
+
+# leaflet地圖
+m <- df %>% 
+  leaflet() %>%
+  addTiles() %>%
+  addCircles(lng = ~longitude, 
+             lat = ~latitude, 
+             radius = ~usage*80, 
+             label = ~paste0(df$sarea, "-", df$sna, "-", round(df$usage*100,0), "%"),
+             labelOptions = labelOptions(
+                   textsize = "16px",
+                   style = list("font-weight" = "bold", padding = "4px"))) %>%
+  addControl(title, position = "topleft", className="map-title")
+m
 # end
