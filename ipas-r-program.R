@@ -1320,9 +1320,15 @@ p <- ggplot(iris, aes(Sepal.Length, Sepal.Width)) +
   facet_wrap(~Species, ncol=1)
 p
 
+# ggplot: facet_wrap 分面-1維
 ggplot(mpg, aes(displ, hwy)) + 
   geom_point() + 
   facet_wrap(~class)
+
+# ggplot: facet_grid 分面-2維, (列, 行)
+ggplot(mpg, aes(displ, hwy)) +
+  geom_point() +
+  facet_grid(cols = vars(cyl), rows = vars(class))
 
 # ggplot2: 線圖+散佈圖
 ggplot(mpg, aes(displ, hwy)) +
