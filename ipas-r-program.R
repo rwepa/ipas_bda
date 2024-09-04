@@ -22,6 +22,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Updated : 2022.09.12 新增 Chapter 12.dplyr 套件
 # Updated : 2024.08.02 新增 Chapter 13.正規表示式
 # Updated : 2024.08.02 新增 Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
+# Updated : 2024.09.04 新增 Chapter 15.RMarkdown輸出中文PDF錯誤
 
 # 大綱 -----
 # Chapter 1. Basic R
@@ -38,6 +39,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Chapter 12.dplyr 套件
 # Chapter 13.正規表示式
 # Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
+# Chapter 15.RMarkdown輸出中文PDF錯誤
 
 # Chapter 1. Basic R -----
 
@@ -1711,4 +1713,27 @@ m <- df %>%
                    style = list("font-weight" = "bold", padding = "4px"))) %>%
   addControl(title, position = "topleft", className="map-title")
 m
+
+# Chapter 15.RMarkdown輸出中文PDF錯誤 -----
+
+# 解決方法:
+# 步驟1. 安裝 tinytex
+install.packages("tinytex")
+
+# 步驟2. 安裝 TinyTeX
+tinytex::install_tinytex()
+
+#步驟3. 設定 .Rmd 檔案的標題 header-includes:, 本例以中文輸入測試
+---
+title: "大數據分析"
+author: "李明昌"
+date: "2024-07-27"
+header-includes:
+  - \usepackage{ctex}
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
+# 第1次執行時, 將自動安裝 platex 相關套件, 安裝完成後自動建立PDF檔案
 # end
