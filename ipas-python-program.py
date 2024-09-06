@@ -122,7 +122,7 @@ jupyter-notebook
 # editor: run cell: Ctrl + Return --> F9
 
 ##############################
-# 將 Jupyter Notebook 轉換為 .py
+# Jupyter Notebook 轉換為 .py
 ##############################
 
 # 在 Jupyter Notebook 執行以下指令, 自動建立 myjupyter_code.py
