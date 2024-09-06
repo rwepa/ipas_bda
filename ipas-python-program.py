@@ -122,6 +122,13 @@ jupyter-notebook
 # editor: run cell: Ctrl + Return --> F9
 
 ##############################
+# 將 Jupyter Notebook 轉換為 .py
+##############################
+
+# 在 Jupyter Notebook 執行以下指令, 自動建立 myjupyter_code.py
+!jupyter nbconvert --to script myjupyter_code.ipynb
+
+##############################
 # 01.資料型態與基本運算.py
 ##############################
 
