@@ -22,6 +22,7 @@ Updated : 2022.09.21 -新增 19.ipynb轉換為pdf檔案
 Updated : 2022.11.14 -新增 20.皮馬印第安人糖尿病預測分析
 Updated : 2023.02.27 -新增 21.pandas繪圖
 Updated : 2023.12.17 -新增 22.顯示已經載入模組的清單
+Updated : 2024.09.24 -新增 23.將 ipynb 轉換為 py 檔案
 """
 
 # 經濟部 iPAS 巨量資料分析師認證-Python學習參考資料
@@ -54,6 +55,7 @@ Updated : 2023.12.17 -新增 22.顯示已經載入模組的清單
 # 20.皮馬印第安人糖尿病預測分析
 # 21.pandas繪圖
 # 22.顯示已經載入模組的清單
+# 23.將 ipynb 轉換為 py 檔案
 
 # Anaconda 下載
 # https://www.anaconda.com/
@@ -3334,4 +3336,12 @@ output = [module.__name__ for module in sys.modules.values() if module]
 output = sorted(output)
 print("已經載入的模組(包括方法)清單: ", output)
 print("已經載入的模組(包括方法)個數: ", len(output))
+
+##############################
+# 23.將 ipynb 轉換為 py 檔案
+##############################
+
+# 開啟 Anaconda Prompt, 輸入以下指令
+jupyter nbconvert myfile.ipynb --to python
+
 # end
