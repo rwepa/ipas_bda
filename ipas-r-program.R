@@ -1716,6 +1716,9 @@ m
 
 # Chapter 15.RMarkdown輸出中文PDF錯誤 -----
 
+# YouTube: https://youtu.be/6Wc75BH02iE
+# LINK: https://rwepa.blogspot.com/2024/09/rmarkdown-chinese-font-pdf.html
+
 # 解決方法:
 # 步驟1. 安裝 tinytex
 install.packages("tinytex")
