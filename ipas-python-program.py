@@ -82,8 +82,8 @@ pip install 模組名稱
 conda update 模組名稱
 pip install -U 模組名稱
 
-# 範例: 更新 anaconda 模組
-conda update anaconda
+conda update anaconda # 更新 anaconda 模組
+conda update --all # 更新所有模組
 
 # 範例: 更新 Spyder 模組
 conda update spyder
