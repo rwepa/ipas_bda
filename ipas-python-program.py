@@ -106,7 +106,7 @@ os.listdir(os.getcwd()) # 顯示檔案清單
 
 # 顯示模組提供之函數
 dir(os)
-
+# jupyter notebook 清空 cache --> CTRL + Shift + R
 # jupyter notebook – 更改預設目錄
 """
 cd C:\
