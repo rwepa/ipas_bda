@@ -1739,4 +1739,7 @@ output:
   word_document: default
 ---
 # 第1次執行時, 將自動安裝 platex 相關套件, 安裝完成後自動建立PDF檔案
+
+# Mathematics in R Markdown 
+# https://rpruim.github.io/s341/S19/from-class/MathinRmd.html
 # end
