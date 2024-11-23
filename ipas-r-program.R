@@ -25,6 +25,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Updated : 2024.09.04 新增 Chapter 15.RMarkdown輸出中文PDF錯誤
 
 # 大綱 -----
+# Chapter 0. R筆記
 # Chapter 1. Basic R
 # Chapter 2. Preparing Data
 # Chapter 3. Graphics
@@ -40,6 +41,11 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Chapter 13.正規表示式
 # Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
 # Chapter 15.RMarkdown輸出中文PDF錯誤
+
+# Chapter 0. R筆記 -----
+
+# 2024.11.23
+# fviz_nbclust {factoextra}: 估計集群法最佳集群個數與視覺化繪圖.
 
 # Chapter 1. Basic R -----
 
