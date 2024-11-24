@@ -1527,8 +1527,8 @@ plt.show()
 
 import matplotlib
 
-# 設定 matplotlib.rcParams 方法
-matplotlib.rcParams['font.sans-serif'] = ['Microsoft YaHei']
+# 設定 matplotlib.rc 方法
+matplotlib.rc('font', family='Microsoft JhengHei')
 
 # 設定負號正確顯示
 matplotlib.rcParams['axes.unicode_minus'] = False
