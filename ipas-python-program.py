@@ -1753,10 +1753,10 @@ SELECT date(rental_date) FROM rental;
 ##############################
 # 10.Python連結MySQL
 ##############################
+# pip install mysql-connector-python
 
 # example 1 - 資料庫連結
 import mysql.connector
-
 # https://dev.mysql.com/doc/sakila/en/
 cnx = mysql.connector.connect(user='root', 
                               password='123456',
