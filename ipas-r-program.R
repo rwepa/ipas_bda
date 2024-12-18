@@ -783,6 +783,17 @@ summary(cars.lm)
 vcov(cars.lm)
 # end
 
+# residual plot
+plot(dist ~ speed, 
+     data = cars, 
+     xlab = 'Speed', 
+     ylab = 'Stopping distance', 
+     main = 'Speed vs. Stopping distance for cars')
+
+abline(cars.lm)
+points(cars$speed, fitted(cars.lm), pch=18, col = "blue")
+segments(cars$speed, cars$dist, cars$speed, fitted(cars.lm), col = "green")
+
 # Chapter 5.Application -----
 
 # p.157
