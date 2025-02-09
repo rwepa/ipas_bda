@@ -72,7 +72,13 @@ conda list
 pip list
 
 # 顯示已經安裝模組的資訊
-pip show 模組名稱
+pip show pandas
+
+# 精簡顯示已經安裝模組的版本
+pip list | findstr pandas
+
+# same as the above for Ubuntu
+pip list | grep pandas
 
 # 安裝模組
 conda install 模組名稱
