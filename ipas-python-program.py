@@ -2881,6 +2881,9 @@ python -m Orange.canvas
 # 檢視所有虛擬環境清單
 conda env list
 
+# 顯示模組訊息
+pip show pandas
+
 # 啟用 myenv 虛擬環境
 conda activate myenv
 
