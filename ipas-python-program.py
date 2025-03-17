@@ -2881,8 +2881,14 @@ python -m Orange.canvas
 # 檢視所有虛擬環境清單
 conda env list
 
+# 安裝模組
+pip install package_name1 package_name2 package_name3
+
 # 顯示模組訊息
 pip show pandas
+
+#  移除模組
+pip uninstall package_name
 
 # 啟用 myenv 虛擬環境
 conda activate myenv
