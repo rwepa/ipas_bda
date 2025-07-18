@@ -23,7 +23,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Updated : 2024.08.02 新增 Chapter 13.正規表示式
 # Updated : 2024.08.02 新增 Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
 # Updated : 2024.09.04 新增 Chapter 15.RMarkdown輸出中文PDF錯誤
-# Updated : 2025.07.18 新增 Chapter 16.JAVA_HOME設定
+# Updated : 2025.07.18 新增 Chapter 16.JAVA_HOME
 
 # 大綱 -----
 # Chapter 0. R筆記
@@ -42,6 +42,7 @@ update.packages(ask = FALSE, checkBuilt = TRUE)
 # Chapter 13.正規表示式
 # Chapter 14.YouBike2.0臺北市公共自行車即時資訊資料分析
 # Chapter 15.RMarkdown輸出中文PDF錯誤
+# Chapter 16.JAVA_HOME
 
 # Chapter 0. R筆記 -----
 
@@ -1761,22 +1762,22 @@ output:
 # Mathematics in R Markdown 
 # https://rpruim.github.io/s341/S19/from-class/MathinRmd.html
 
-# Chapter 16.JAVA_HOME設定
+# Chapter 16.JAVA_HOME -----
 
-步驟1. 下載 Java SE Development Kit 21.0.8
-https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe
+# 步驟1. 下載 Java SE Development Kit 21.0.8
+# https://download.oracle.com/java/21/latest/jdk-21_windows-x64_bin.exe
 
-步驟2. 安裝 JDK
-jdk-21_windows-x64_bin.exe
+# 步驟2. 安裝 JDK
+# jdk-21_windows-x64_bin.exe
 
-步驟3. 設定 JAVA_HOME
-設定 \ 系統 \ 進階系統設定 \ 環境變數 \ 系統變數
-新增系統變數 \ 變數名稱: JAVA_HOME , 變數值: C:\Program Files\Java\jdk-21 \ 確定
+# 步驟3. 設定 JAVA_HOME
+# 設定 \ 系統 \ 進階系統設定 \ 環境變數 \ 系統變數
+# 新增系統變數 \ 變數名稱: JAVA_HOME , 變數值: C:\Program Files\Java\jdk-21 \ 確定
 
-步驟4. 設定 Path
-系統變數 \ Path \ 編輯 \ %JAVA_HOME%\bin \ 確定
+# 步驟4. 設定 Path
+# 系統變數 \ Path \ 編輯 \ %JAVA_HOME%\bin \ 確定
 
-步驟5. 命令提示字元
-java -version
+# 步驟5. 命令提示字元
+# java -version
 # java version "21.0.8" 2025-07-15 LTS ...
 # end
