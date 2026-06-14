@@ -1,6 +1,6 @@
-# iPAS 巨量資料分析師認證
+# iPAS AI應用規劃師認證
 
-+ 2026.4.8 科目名稱已經更新為**AI應用規劃師能力鑑定**: https://ipd.nat.gov.tw/ipas/certification/AIAP/news
++ 2026.4.8 巨量資料分析師已經更新為**AI應用規劃師能力鑑定**: https://ipd.nat.gov.tw/ipas/certification/AIAP/news
 
 + 主題: 提供 iPAS 巨量資料分析師認證參考資料.
 
